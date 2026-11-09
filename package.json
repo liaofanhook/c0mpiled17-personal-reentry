@@ -1,0 +1,10 @@
+{
+  "name": "personal-reentry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Recover the right work episode and a source-aware next step.",
+  "engines": {"node": ">=22"},
+  "scripts": {"start": "node server.mjs", "check": "node --check server.mjs && node --check public/app.js"},
+  "dependencies": {"openai": "7.53.0"}
+}
