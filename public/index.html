@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111916"><title>Personal Re-entry — Resume the right work</title><meta name="description" content="Recover the right work episode, its sources, and a clear next step."><link rel="icon" href="data:,"><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
+<body>
+ <header class="site-header"><a class="brand" href="/" aria-label="Personal Re-entry home"><span class="brand-mark" aria-hidden="true">↳</span><span>Personal Re-entry<span class="brand-tag">A place to pick up</span></span></a><span class="mode"><i></i> Model-assisted <span class="mode-divider">/</span> Synthetic workspace <span class="mode-divider">/</span> Read-only</span></header>
+ <main>
+  <section class="intro"><div class="eyebrow"><span class="line"></span> FOR PEOPLE RETURNING TO AI WORK</div><h1>Resume the right work,<br><em>not just the last chat.</em></h1><p>Give it a vague anchor. It recovers the right work episode, current state, and whether it is safe to continue.</p></section>
+  <section class="entry-section" aria-labelledby="anchor-label">
+   <div class="section-index">01 <span>THE ANCHOR</span></div>
+   <form id="anchor-form"><label id="anchor-label" for="anchor">What work are you returning to?</label><textarea id="anchor" rows="2" placeholder="A few words about the work you want to resume" maxlength="2000" required></textarea><div class="input-bottom"><span>Start with a task, event, or unfinished thought.</span><button id="run" class="primary" type="submit">Run re-entry <span aria-hidden="true">↗</span></button></div></form>
+   <div class="workspace-strip"><span class="stack-symbol" aria-hidden="true">▤</span><strong>One shared workspace</strong><span>15 records · 6 source types</span><span class="workspace-clock">Synthetic snapshot · Dec 6, 2026</span></div>
+  </section>
+  <div class="process" aria-label="Re-entry progress"><span id="step-episode"><b>02</b> Episode Resolution</span><span class="process-line"></span><span id="step-source"><b>03</b> Source Check</span><span class="process-line"></span><span id="step-card"><b>04</b> Re-entry Card</span></div>
+  <section id="status" aria-live="polite" hidden></section>
+  <section id="result" hidden aria-labelledby="card-title"></section>
+  <section id="empty-state" class="empty-state"><span class="return-symbol" aria-hidden="true">↶</span><div><h2>Your next step begins with the right context.</h2><p>Submitted work, old drafts, and unresolved decisions can look alike.<br>Recover the work position before continuing.</p></div><span class="empty-note">SOURCE-AWARE<br>CONTROL-CHECKED</span></section>
+  <footer><span>PERSONAL RE-ENTRY <i>·</i> A SYNTHETIC, READ-ONLY PROTOTYPE</span><span>Recovery is context. Continuation is a separate check.</span></footer>
+ </main>
+ <dialog id="evidence-dialog" aria-labelledby="evidence-title"><div class="dialog-top"><span class="eyebrow">VISIBLE SOURCE RECORD</span><button id="close-evidence" class="icon-button" aria-label="Close evidence">×</button></div><div id="evidence-content"></div></dialog>
+</body></html>
