@@ -33,7 +33,7 @@ export const server=createServer(async(req,res)=>{
    if(!/\b(continue|resume|return|back|prepar|draft|plan|decide|work|event|meetup|pitch|demo)\w*\b/i.test(b.anchor))return json(res,422,{error:'This prototype resumes ongoing work. Enter the work you want to return to.',code:'UNSUPPORTED_REQUEST_IN_THIS_PROTOTYPE'});
    const result=await store.run(sid,b.anchor);
    if(result.stale)return json(res,409,{error:'Input changed. Run re-entry again.'});
-   console.log(JSON.stringify({type:'result',request_id:result.request_id,reason_code:result.gate.reason_code,recovery_scope:result.gate.recovery_scope}));
+   console.log(JSON.stringify({type:'result',request_id:result.request_id,reason_code:result.gate.reason_code,recovery_scope:result.gate.recovery_scope,...(process.env.REENTRY_EVIDENCE_STDOUT==='1'?{packet:result.packet,gate:result.gate,info:result.info,workspace_revision,policy_revision}:{})}));
    return json(res,200,result);
   }
   if(req.method==='POST'&&url.pathname==='/continue'){
