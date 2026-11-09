@@ -6,6 +6,37 @@ A read-only prototype for people returning to interrupted AI work. Give it a rou
 
 Built from new source during the November 9, 2026 c0mpiled-17 session, officially started at 10:01 KST. First commit: 10:08 KST. No product code or Git history was reused from preparation.
 
+## Market
+
+### A problem that emerged from real work
+
+Personal Re-entry grew out of repeated re-entry problems in real, long-running AI-assisted work. After an interruption, the difficult part was not simply finding the last conversation. It was determining which work episode the user was returning to, which decisions and instructions still governed it, whose approval was required, and whether the requested next action could proceed.
+
+Today, this position is often reconstructed manually by searching old conversations, reopening documents, comparing versions, and relying on memory. Retrieving prior context does not by itself establish which sources and decisions still govern the work, or whether the next action is currently authorized. Personal Re-entry treats context recovery and permission to act as separate questions.
+
+### Who needs it first
+
+The initial users are AI-native founders and operators who rely on AI across long-running, interruption-prone work involving multiple conversations, documents, email, and tools. For them, incorrect re-entry is not a one-time inconvenience: it creates repeated searching, duplicated work, outdated decisions, and the risk of continuing from the wrong position.
+
+The initial commercial hypothesis is that users facing frequent interruptions and costly re-entry errors will pay for a reliable way to reconstruct their current valid work position before continuing. The value is highest when an incorrect next step creates meaningful rework, delay, or operational risk.
+
+### Why now
+
+AI work is moving beyond isolated prompts toward tasks that continue across hours, days, sessions, and tools. As people delegate more consequential work to AI, returning to the correct and still-valid work position becomes a recurring product need rather than a chat-history feature.
+
+### Two related product paths
+
+| Product path             | Initial user or setting                                      | Core need                                                        | Current status                                                                                            |
+| ------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Personal Re-entry        | AI-native founders and operators                             | Resume long-running AI work from the current valid work position | Personal, read-only prototype demonstrated in this repository                                             |
+| Separate enterprise line | Organizations managing continuity-sensitive AI-assisted work | Preserve valid work state, authority, and permission to proceed  | Separate read-only validation in an operational domain using controlled historical cases; work is ongoing |
+
+Personal Re-entry is the individual-facing product entry point. In parallel, we are examining the same underlying state-recovery and control problem through a separate enterprise line. This hackathon build focuses on the personal, read-only experience.
+
+### Evidence behind the direction
+
+The product direction is grounded in repeated firsthand operating experience and reinforced by practitioner feedback from work fragmented across email and enterprise systems. The personal prototype uses a synthetic workspace to demonstrate its control logic without exposing real operational data. In parallel, a separate read-only domain validation using controlled historical cases is underway.
+
 ## Run locally
 
 Use Node.js 22 or later (verified on 24.21.0).
